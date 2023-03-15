@@ -5,7 +5,6 @@ const { Configuration, OpenAIApi } = require("openai");
 
 const app = express();
 dotenv.config();
-const PORT = 3001;
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -53,10 +52,6 @@ app.post("/api/chatgpt", async (req, res) => {
       });
     }
   }
-});
-
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
 });
 
 // Export the Express API
